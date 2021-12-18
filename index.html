@@ -35,14 +35,74 @@
 					<h1>NuCamp</h1>
 					<h2>a better way to camp</h2>
 				</div>
+				<!-- TASK ONE -->
 				<div class="col col-md-4 col-xl-2 align-self-center">
-					<a href="#reserveForm" type="button" class="btn btn-info" data-toggle="tooltip"
-						data-placement="bottom" data-html="true" title="Or call us at <br /> 
-					<strong> 1-206-555-134 </strong>">Reserve Campsite</a>
+					<a type="button" class="btn btn-info" data-toggle="modal" data-target="#reserveModal"
+						data-placement="bottom">Reserve Campsite</a>
 				</div>
+				<!-- END TASK ONE -->
 			</div>
 		</div>
 	</header>
+
+	<!-- TASK TWO -->
+	<div id="reserveModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-info text-white">
+					<h3 class="modal-title">Reserve a Campsite</h3>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<form>
+							<div class="form-group row">
+								<label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
+								<div class="col">
+									<select class="form-control" name="numCampers" id="numCampers">
+										<option value="select">Select...</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label for="date" class="col-form-label col-sm-6">Date</label>
+								<div class="col-sm-6">
+									<input type="date" class="form-control" id="date" name="date" placeholder="date" />
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label for="siteTent" class="col-form-label col-sm-6">Campsite Type</label>
+								<div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
+									<label class="btn  btn-success active">
+										<input type="radio" id="siteTent" value="tent" name="siteType" checked> Tent
+									</label>
+									<label class="btn  btn-info active">
+										<input type="radio" id="siteRV" value="RV" name="siteType" checked> RV
+									</label>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<div class="col">
+									<button class="btn btn-secondary " data-dismiss="modal">Cancel</button>
+									<button class="btn btn-primary">Search</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END TASK TWO -->
 
 	<nav class="navbar navbar-expand-sm navbar-dark sticky-top">
 		<div class="container">
@@ -159,13 +219,13 @@
 						</div>
 					</div>
 					<a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+						<span class="carousel-control-prev-icon"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+						<span class="sr-only">Next</span>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -224,7 +284,9 @@
 			</div>
 		</div>
 
-		<div class="row row-content">
+		<!-- DELETE INSTRUCTION FOR TASK 2 -->
+
+		<!-- <div class="row row-content">
 			<div class="col col-sm-6 mx-auto">
 				<div class="card">
 					<h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
@@ -261,14 +323,15 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
+
+		<!-- END DELETE INSTRUCTION FOR TASK 2 -->
 
 	</div>
 
-
 	<footer class="site-footer">
 		<div class="container">
-			<div class="row row-content align-items-center">
+			<div class="row align-items-center">
 				<div class="col-4 col-sm-2 offset-1">
 					<h5>Links</h5>
 					<ul class="list-unstyled">
@@ -304,11 +367,11 @@
 	<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-	<script>
+	<!-- <script>
 		$(function () {
 			$('[data-toggle="tooltip"]').tooltip()
 		})
-	</script>
+	</script> -->
 
 </body>
 
