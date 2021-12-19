@@ -54,3 +54,11 @@ a, a:hover {
 .carousel {
     border: solid #5637DD;
 }
+
+/* for id use # */
+#carouselButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
